@@ -55,7 +55,7 @@ Go to:
 ```
 Make sure the file has these lines
 ```rb
-  config.token_lifetime = 1.week
+  config.token_lifetime = 1.day
   config.token_signature_algorithm = 'HS256'
   config.token_secret_signature_key = -> { Rails.application.secrets.secret_key_base }
   config.not_found_exception_class_name = 'ActiveRecord::RecordNotFound'
@@ -75,7 +75,7 @@ We're now ready to set up the controllers.
 
 ### Application Controller
 
-Go to your Application Controller and the below code.
+Go to your Application Controller and enter the below code.
 This adds the Knock authenticator into your controllers and also skips the authenticity error you'd otherwise be getting.
 
 ```rb
@@ -147,7 +147,7 @@ It should look like this in your editor..
 
 ![cors.rb](https://i.imgur.com/xN1T7oD.png)
 
-Now insert the middleware
+Now insert the middleware into cors.rb
 ```rb
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
@@ -190,7 +190,7 @@ Then of course a
 ```bash
 rails db:seed
 ```
-in the terminal and we're ready to get started on the front end.
+and we're ready to get started on the front end.
 
 ### Start your server
 ```
