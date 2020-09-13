@@ -16,7 +16,7 @@ Create your rails app with a Postgres database
 ```bash
 rails new your_project -d postgresql
 ```
-Navigate into your project folder and open in your editor. Make sure the below gems are installed on your PC and active in the gemfile.
+Navigate into your project folder and open in your editor. Make sure the below gems are installed on your system and active in the gemfile.
 ```ruby
 gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
